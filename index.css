@@ -52,11 +52,12 @@
 }
 
 .main {
-  position: absolute;
-  width: 92%;
-  bottom: 35px;
-  top: 50px;
-  background-color: aquamarine;
+    width: 90%;
+    position: absolute;
+    background-color: aquamarine;
+    top: 50px;
+    bottom: 50px;
+    padding: 14px;
 }
 
 .date {
@@ -101,7 +102,7 @@
 
 .title,
 .author {
-  width: 50%;
+  max-width: 50%;
   border: 1px solid green;
   border-radius: 10px;
   font-family: 'Times New Roman', Times, serif;
@@ -110,10 +111,11 @@
 }
 
 .add-btn {
-  width: 60px;
+  float: right;
+  max-width: 60px;
   height: 40px;
+  margin-inline-start: 40%;
   padding: 10px;
-  margin-left: 300px;
   background-color: green;
   border: 0;
   border-radius: 10px;
