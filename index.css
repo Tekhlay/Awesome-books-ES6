@@ -8,6 +8,7 @@
     margin: 0 auto;
 }
 
+
 .header {
     width: 90%;
     position: fixed;
@@ -63,11 +64,26 @@
     margin: 0 auto;
 }
 
+.list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
 .title-bar {
     font-family: 'Times New Roman', Times, serif;
     font-weight: 500;
     font-size: 30px;
     color: blue;
+    margin: 30px;
+}
+
+.new-book-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
 }
 
 .add-form {
@@ -80,6 +96,7 @@
     width: 50%;
     border: 1px solid green;
     border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
     padding: 10px;
 }
@@ -119,3 +136,68 @@
     padding-left: 10px;
     color: white;
 }
+
+.list-container, .new-book-container, .contact-container {
+    display: none;
+}
+
+.book-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0 10px 30px;
+  }
+  
+  .book-item button {
+    background-color: brown;
+    float: right;
+    margin: 0 10px 0 50px;
+    padding: 5px;
+    color: white;
+    border: 0;
+  }
+  
+  .book-item button:hover {
+    background-color: rgb(145, 145, 185);
+    float: right;
+    margin: 0 10px 0 50px;
+    padding: 5px;
+    color: yellow;
+  }
+
+  .light {
+  background-color: rgb(138, 30, 233);
+}
+
+.error {
+    width: 50%;
+  color: white;
+  background-color: red;
+  padding: 10px;
+  text-align: center;
+  margin: 30px 0;
+  border-radius: 10px;
+}
+
+.success {
+    width: 50%;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    background-color: green;
+    margin: 30px 0;
+}
+
+.white {
+    background-color: lightgrey;
+}
+
+.remove-book {
+    background-color: yellowgreen;
+    color: #fff;
+    padding: 10px;
+    margin: 30px 0;
+    text-align: center;
+  }
