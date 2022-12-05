@@ -52,12 +52,12 @@
 }
 
 .main {
-    width: 90%;
-    position: absolute;
-    background-color: aquamarine;
-    top: 50px;
-    bottom: 50px;
-    padding: 14px;
+width: 90%;
+position: absolute;
+background-color: aquamarine;
+top: 50px;
+bottom: 50px;
+padding: 14px;
 }
 
 .date {
