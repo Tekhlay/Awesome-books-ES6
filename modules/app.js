@@ -35,15 +35,15 @@ class StoreBook {
 
 const savebook = new StoreBook();
 // Get input value
-getformInput = () => {
+const getformInput = () => {
   const title = document.querySelector('.title');
   const author = document.querySelector('.author');
   const insertbook = new Book(title.value, author.value);
   return insertbook;
-}
+};
 
 // Display teh list of books on the web page
-DisplayBooks = (index) => {
+let DisplayBooks = (index) => {
   let bgcolor = '';
   if (savebook.BookData.indexOf(index) % 2 !== 0) {
     bgcolor = 'white';
@@ -60,7 +60,7 @@ DisplayBooks = (index) => {
   removeBook.addEventListener('click', () => savebook.removeBook(index.bookid));
   displaybook.appendChild(removeBook);
   listOfbooks.appendChild(displaybook);
-}
+};
 
 const title = document.querySelector('.title');
 const author = document.querySelector('.author');
@@ -85,31 +85,31 @@ window.onload = () => {
   savebook.BookData.forEach((item) => DisplayBooks(item));
 };
 
-showAlert = () => {
+let showAlert = () => {
   const div = document.createElement('div');
   div.className = 'error';
   div.appendChild(document.createTextNode('fields are required'));
   const newB = document.querySelector('.form-title');
   newB.appendChild(div);
   setTimeout(() => document.querySelector('.error').remove(), 3000);
-}
+};
 
-success = () => {
+const success = () => {
   const div = document.createElement('div');
   div.className = 'success';
   div.appendChild(document.createTextNode('Book successfully added!'));
   const newB = document.querySelector('.form-title');
   newB.appendChild(div);
   setTimeout(() => document.querySelector('.success').remove(), 3000);
-}
+};
 
-removeSuccess = () => {
+let removeSuccess = () => {
   const div = document.createElement('div');
   div.className = 'remove-book';
   div.appendChild(document.createTextNode('Book Deleted Successfully!'));
   head.appendChild(div);
   setTimeout(() => document.querySelector('.remove-book').remove(), 3000);
-}
+};
 
 const list = document.querySelector('.book-list');
 const add = document.querySelector('.addnewbook');
@@ -144,6 +144,3 @@ contactlink.addEventListener('click', () => {
   contactlink.style.color = 'blue';
   addlink.style.color = 'black';
 });
-
-const date = new Date().toLocaleString();
-document.querySelector('.date').innerHTML = date;
