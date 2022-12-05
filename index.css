@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container-all {
+    width: 94%;
+    margin: 0 auto;
+}
+
+.header {
+    width: 90%;
+    position: fixed;
+    background-color:cadetblue;
+    top: 0;
+    border-radius: 50px 50px 0 0;
+    padding: 14px;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 10px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    color: black;
+}
+
+.addLink {
+    border-left: 2px solid green;
+    border-right: 2px solid green;
+    padding: 0 10px;
+}
+
+.main {
+    width: 90%;
+    margin-top: 50px;
+   display: flex;
+   justify-content: space-between;
+}
+
+.content {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.title-bar {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: 30px;
+    color: blue;
+}
+
+.add-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title, .author {
+    width: 50%;
+    border: 1px solid green;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.add-btn {
+    width: 60px;
+    height: 40px;
+    padding: 10px;
+    margin-left: 300px;
+    background-color: green;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+
+.footer {
+    background-color: brown;
+    border-radius: 0 0 50px 50px;
+    width: 90%;
+    margin: 0 auto;
+   position: absolute;
+   bottom: 0;
+   padding: 14px;
+}
+
+.footer p {
+    font-size: 20px;
+    padding-left: 10px;
+    color: white;
+}
