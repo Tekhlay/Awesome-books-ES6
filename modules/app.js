@@ -17,14 +17,14 @@ class StoreBook {
   }
   // Add new Book to the book list
 
-  addBook(newbook) {
+  addBook = (newbook) => {
     this.BookData.push(newbook);
     localStorage.setItem('BookDB', JSON.stringify(this.BookData));
     DisplayBooks(newbook);
   }
 
   // Remove book from the list
-  removeBook(bookid) {
+  removeBook = (bookid) => {
     const rmvbook = document.getElementById(bookid);
     rmvbook.remove();
     removeSuccess();
@@ -35,7 +35,7 @@ class StoreBook {
 
 const savebook = new StoreBook();
 // Get input value
-function getformInput() {
+getformInput = () => {
   const title = document.querySelector('.title');
   const author = document.querySelector('.author');
   const insertbook = new Book(title.value, author.value);
@@ -43,7 +43,7 @@ function getformInput() {
 }
 
 // Display teh list of books on the web page
-function DisplayBooks(index) {
+DisplayBooks = (index) => {
   let bgcolor = '';
   if (savebook.BookData.indexOf(index) % 2 !== 0) {
     bgcolor = 'white';
@@ -85,7 +85,7 @@ window.onload = () => {
   savebook.BookData.forEach((item) => DisplayBooks(item));
 };
 
-function showAlert() {
+showAlert = () => {
   const div = document.createElement('div');
   div.className = 'error';
   div.appendChild(document.createTextNode('fields are required'));
@@ -94,7 +94,7 @@ function showAlert() {
   setTimeout(() => document.querySelector('.error').remove(), 3000);
 }
 
-function success() {
+success = () => {
   const div = document.createElement('div');
   div.className = 'success';
   div.appendChild(document.createTextNode('Book successfully added!'));
@@ -103,7 +103,7 @@ function success() {
   setTimeout(() => document.querySelector('.success').remove(), 3000);
 }
 
-function removeSuccess() {
+removeSuccess = () => {
   const div = document.createElement('div');
   div.className = 'remove-book';
   div.appendChild(document.createTextNode('Book Deleted Successfully!'));
